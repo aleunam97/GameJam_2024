@@ -28,12 +28,15 @@
 ├── Assets
 │   ├── Animations
 │   ├── Audio
+│   │   └── Banks
 │   ├── Fonts
+│   ├── Gizmos
 │   ├── Materials
 │   ├── Models
 │   ├── Prefabs
 │   │   ├── Core
-│   │   └── Managers
+│   │   ├── Managers
+│   │   └── UI
 │   ├── Resources
 │   ├── Scenes
 │   ├── Scripts
@@ -51,9 +54,6 @@
 │   ├── Sprites
 │   ├── Textures
 │   ├── Plugins
-│   ├── Editor
-│   ├── Gizmos
-│   ├── Resources
 │   └── VFX
 ├── Packages
 └── ProjectSettings
