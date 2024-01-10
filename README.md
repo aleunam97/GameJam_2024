@@ -3,6 +3,7 @@
 [![Generic badge](https://img.shields.io/badge/2.02.19%20%28Unity%20Verified%29-FMOD-6dd0f6.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/1.2.745-DoTween-94de59.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/0.0.5-SuperBehaviour-a46ac3.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/1.7.0-Input%20System-0476b7.svg)](https://shields.io/)
 
 *This is not an official product of Unity Technologies, please see the Unity Trademark Guidelines for more information.*
 
