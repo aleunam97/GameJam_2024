@@ -1,0 +1,6 @@
+# Ignore Build directory
+Template_Build[s]/*
+!Template_Build[s]/.gitkeep
+
+# Ignore MacOS temp files
+.DS_Store

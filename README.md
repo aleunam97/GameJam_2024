@@ -16,14 +16,14 @@
 
 ## Features
 - Pre-Setup FMOD Project with a basic test event and a basic mixer setup
-- Important base packages installed (DoTween, SuperBehaviour, etc)
+- Important base packages installed (DoTween, SuperBehaviour, new Input System, etc)
 - Basic folder structure
 - Removed default assets
 - Imported TextMeshPro
 - Clean .gitignore setup
 
 ## Folder Structure
-` Project_Unity ` Folder contains the Unity Project itself.
+` Template_Unity ` Folder contains the Unity Project itself.
 ```bash
 ├── Assets
 │   ├── Animations
@@ -59,7 +59,7 @@
 └── ProjectSettings
 ```
 
-` Project_FMOD ` Folder contains the FMOD Project already linked with the Unity Project.
+` Template_FMOD ` Folder contains the FMOD Project already linked with the Unity Project.
 ```bash
 ├── Assets
 │   ├── _Placeholder
@@ -68,10 +68,10 @@
 │   ├── SFX
 │   └── UI
 ├── Metadata
-└── Project_Fmod.fspro
+└── Template_Fmod.fspro
 ```
 
-` Project_Builds ` This folder can be used to store the builds of the project. (All its content is ignored by git)
+` Template_Builds ` This folder can be used to store the builds of the project. (All its content is ignored by git)
 
 ## Installation for experienced users
 1. Create a repository by importing the [unity-template](https://gitlab.com/hostur2/unity-template) repository
@@ -131,7 +131,7 @@
 2. Sign-In or create a new account (It's free but you need to have an account to download FMOD)
 3. Download the **FMOD Studio** Installer for <kbd>v2.02.19 (Unity Verified)</kbd>
 4. Execute the installer and skip through the installation process (You can leave everything as default)
-5. Open the Folder `Project_FMOD` in FMOD Studio
+5. Open the Folder `Template_FMOD` in FMOD Studio
 
 ### Setup VSCode (Optional)
 *VSCode is a free and open source code editor. It's a very powerful tool and has a lot of extensions to make your life easier. Compared to the legacy Visual Studio it's a lot faster and easier to use. It does need a bit of setup to work with Unity but it's worth it.*
@@ -148,7 +148,7 @@
 8. Set the "External Script Editor" to "Visual Studio Code"
 9. Set the "External Script Editor Args" to `-n -g "$(File)":$(Line):$(Column)`
 10. Press the <kbd>Regenerate Project Files</kbd> button
-11. Open the VSCode project folder by going to `File > Open Folder` and selecting the `Project_Unity` folder
+11. Open the VSCode project folder by going to `File > Open Folder` and selecting the `Template_Unity` folder
 
 ## Detailed Installation `Mac`
 
@@ -197,7 +197,7 @@
 2. Sign-In or create a new account (It's free but you need to have an account to download FMOD)
 3. Download the **FMOD Studio** Installer for <kbd>v2.02.19 (Unity Verified)</kbd>
 4. Execute the installer and skip through the installation process (You can leave everything as default)
-5. Open the Folder `Project_FMOD` in FMOD Studio
+5. Open the Folder `Template_FMOD` in FMOD Studio
 
 ### Setup VSCode (Optional)
 *VSCode is a free and open source code editor. It's a very powerful tool and has a lot of extensions to make your life easier. Compared to the legacy Visual Studio it's a lot faster and easier to use. It does need a bit of setup to work with Unity but it's worth it.*
@@ -213,4 +213,4 @@
 7. Set the "External Script Editor" to "Visual Studio Code"
 8. Set the "External Script Editor Args" to `-n -g "$(File)":$(Line):$(Column)`
 9. Press the <kbd>Regenerate Project Files</kbd> button
-10. Open the VSCode project folder by going to `File > Open Folder` and selecting the `Project_Unity` folder
+10. Open the VSCode project folder by going to `File > Open Folder` and selecting the `Template_Unity` folder
