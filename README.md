@@ -1,93 +1,216 @@
 # Unity Template
+[![Generic badge](https://img.shields.io/badge/LTS%202022.3.16f1-Unity-141414.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/2.02.19%20%28Unity%20Verified%29-FMOD-6dd0f6.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/1.2.745-DoTween-94de59.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/0.0.5-SuperBehaviour-a46ac3.svg)](https://shields.io/)
 
+*This is not an official product of Unity Technologies, please see the Unity Trademark Guidelines for more information.*
 
+| Table of Contents |
+|:----------------- |
+| [Features](#features) |
+| [Folder Structure](#folder-structure) |
+| [Installation for experienced users](#installation-for-experienced-users) |
+| [Detailed Installation `Windows`](#detailed-installation-windows) |
+| [Detailed Installation `Mac`](#detailed-installation-mac) |
 
-## Getting started
+## Features
+- Pre-Setup FMOD Project with a basic test event and a basic mixer setup
+- Important base packages installed (DoTween, SuperBehaviour, etc)
+- Basic folder structure
+- Removed default assets
+- Imported TextMeshPro
+- Clean .gitignore setup
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
+## Folder Structure
+` Project_Unity ` Folder contains the Unity Project itself.
+```bash
+├── Assets
+│   ├── Animations
+│   ├── Audio
+│   ├── Fonts
+│   ├── Materials
+│   ├── Models
+│   ├── Prefabs
+│   │   ├── Core
+│   │   └── Managers
+│   ├── Resources
+│   ├── Scenes
+│   ├── Scripts
+│   │   ├── Core
+│   │   ├── Enums
+│   │   ├── Editor
+│   │   ├── Extensions
+│   │   ├── Helpers
+│   │   ├── Interfaces
+│   │   ├── Managers
+│   │   ├── Structs
+│   │   └── UI
+│   ├── Settings
+│   ├── Shaders
+│   ├── Sprites
+│   ├── Textures
+│   ├── Plugins
+│   ├── Editor
+│   ├── Gizmos
+│   ├── Resources
+│   └── VFX
+├── Packages
+└── ProjectSettings
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/hostur2/unity-template.git
-git branch -M main
-git push -uf origin main
+
+` Project_FMOD ` Folder contains the FMOD Project already linked with the Unity Project.
+```bash
+├── Assets
+│   ├── _Placeholder
+│   ├── Ambience
+│   ├── Music
+│   ├── SFX
+│   └── UI
+├── Metadata
+└── Project_Fmod.fspro
 ```
 
-## Integrate with your tools
+` Project_Builds ` This folder can be used to store the builds of the project. (All its content is ignored by git)
 
-- [ ] [Set up project integrations](https://gitlab.com/hostur2/unity-template/-/settings/integrations)
+## Installation for experienced users
+1. Create a repository by importing the [unity-template](https://gitlab.com/hostur2/unity-template) repository
+2. Clone the repository to your local machine
+3. `Optional` Run the setup.sh / setup.ps1 script in the root folder to setup the project with your own name
+4. Open the Unity Project and start working on your game
 
-## Collaborate with your team
+## Detailed Installation `Windows`
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### Create Repository
+*Choose the Git-Provider of your choice.*
+#### GitLab (Recommended)
+1. Open the official GitLab website ([https://gitlab.com](https://gitlab.com))
+2. Sign-In or create a new account
+3. Create a new project by clicking on the <kbd>New Project</kbd> button
+4. Select the <kbd>Import project</kbd> tab
+5. Select <kbd>Repository by URL</kbd> and enter `https://gitlab.com/hostur2/unity-template.git`
+6. Fill out the form and click on the <kbd>Create project</kbd> button (You dont have to fill out Username and Password)
 
-## Test and Deploy
+#### GitHub
+1. Open the official GitHub website ([https://github.com](https://github.com))
+2. Sign-In or create a new account
+3. Create a new repository by clicking on the <kbd>New</kbd> button
+4. Select the tiny <kbd>Import a repository</kbd> link
+5. Enter `https://gitlab.com/hostur2/unity-templat` into the <kbd>Your old repository’s clone URL</kbd> field
+6. Enter your repository name and click <kbd>Begin import</kbd>
 
-Use the built-in continuous integration in GitLab.
+### Setup Git and clone the repository
+*Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. It allows you to keep track of your code changes and revert them if needed. It's a very important tool for any developer especially if you are working in a team.*
+1. Download the git scm from the official website ([https://git-scm.com](https://git-scm.com/download/win))
+2. Execute the installer and skip through the installation process (You can leave everything as default)
+3. After installing git locate the folder where you want to store your projects
+4. Right click on the folder and select `Git Bash Here`
+5. Enter the following command to clone the repository `git clone YOUR_REPOSITORY_URL`
+(This will create a new folder called `unity-template` and download the repository into it)
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+> The repository URL can be found on the repository page under the <kbd>Clone</kbd> button and looks like this `https://gitlab.com/USERNAME/GROUP/REPONAME.git`
 
-***
+### Setup Project
+1. Search for `PowerShell` in the windows search bar and open it
+2. Navigate to the `unity-template` folder by using the `cd` command
+   - For example `cd C:\Users\Steve\Documents\unity-template`
+3. If you never used a PowerShell script before you need to allow the execution of scripts by entering `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`
+4. Run the setup script by entering `.\setup.ps1`
+5. Follow the instructions in the script (allways choose the default option by pressing enter)
+6. After the script finished you can close the PowerShell window
 
-# Editing this README
+### Setup Unity
+1. Download Unity Hub from the official website ([https://unity3d.com/get-unity/download](https://unity3d.com/get-unity/download))
+2. Execute the installer and skip through the installation process (You can leave everything as default)
+3. After installing Unity Hub open it and go to the `Installs` tab
+4. Select the `Unity 2020.3.16f1 (LTS)` version and install it
+5. In the following dialog add all platforms you want to build for (You can add more later) and if you are using VSCode (Recommended) remove the "Microsoft Visual Studio Community" from the list
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Setup FMOD
+1. Open the official FMOD Studio website ([https://www.fmod.com/download](https://www.fmod.com/download))
+2. Sign-In or create a new account (It's free but you need to have an account to download FMOD)
+3. Download the **FMOD Studio** Installer for <kbd>v2.02.19 (Unity Verified)</kbd>
+4. Execute the installer and skip through the installation process (You can leave everything as default)
+5. Open the Folder `Project_FMOD` in FMOD Studio
 
-## Suggestions for a good README
+### Setup VSCode (Optional)
+*VSCode is a free and open source code editor. It's a very powerful tool and has a lot of extensions to make your life easier. Compared to the legacy Visual Studio it's a lot faster and easier to use. It does need a bit of setup to work with Unity but it's worth it.*
+1. Download VSCode from the official website ([https://code.visualstudio.com](https://code.visualstudio.com))
+2. Execute the installer and skip through the installation process (You can leave everything as default)
+3. After installing VSCode open it and go to the extensions tab <kbd>Ctrl+Shift+X</kbd>
+4. Install following Extensions:
+    - [SuperBehaviour](https://marketplace.visualstudio.com/items?itemName=lom.superbehaviour) (Recommended)
+    - or
+    - [Unity Tools](https://marketplace.visualstudio.com/items?itemName=Tobiah.unity-tools), [Unity Code Snippets](https://marketplace.visualstudio.com/items?itemName=kleber-swf.unity-code-snippets) and [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+5. After installing the extensions close VSCode download the `.NET Framework 4.7.1` (has to be this exact version) from the official website ([https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471](hthttps://dotnet.microsoft.com/en-us/download/dotnet-framework/net471))
+6. Restart your PC
+7. Open the Unity Project and go to `Edit > Preferences > External Tools`
+8. Set the "External Script Editor" to "Visual Studio Code"
+9. Set the "External Script Editor Args" to `-n -g "$(File)":$(Line):$(Column)`
+10. Press the <kbd>Regenerate Project Files</kbd> button
+11. Open the VSCode project folder by going to `File > Open Folder` and selecting the `Project_Unity` folder
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## Detailed Installation `Mac`
 
-## Name
-Choose a self-explaining name for your project.
+### Create Repository
+*Choose the Git-Provider of your choice.*
+#### GitLab (Recommended)
+1. Open the official GitLab website ([https://gitlab.com](https://gitlab.com))
+2. Sign-In or create a new account
+3. Create a new project by clicking on the <kbd>New Project</kbd> button
+4. Select the <kbd>Import project</kbd> tab
+5. Select <kbd>Repository by URL</kbd> and enter `https://gitlab.com/hostur2/unity-template.git`
+6. Fill out the form and click on the <kbd>Create project</kbd> button (You dont have to fill out Username and Password)
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+#### GitHub
+1. Open the official GitHub website ([https://github.com](https://github.com))
+2. Sign-In or create a new account
+3. Create a new repository by clicking on the <kbd>New</kbd> button
+4. Select the tiny <kbd>Import a repository</kbd> link
+5. Enter `https://gitlab.com/hostur2/unity-templat` into the <kbd>Your old repository’s clone URL</kbd> field
+6. Enter your repository name and click <kbd>Begin import</kbd>
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### Setup Git and clone the repository
+*Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. It allows you to keep track of your code changes and revert them if needed. It's a very important tool for any developer especially if you are working in a team.*
+1. Download the git scm from the official website ([https://git-scm.com](https://git-scm.com/download/mac))
+2. Execute the installer and skip through the installation process (You can leave everything as default)
+3. After installing git locate the folder where you want to store your projects
+4. Right click on the folder and select `New Terminal at Folder`
+5. Enter the following command to clone the repository `git clone https://gitlab.com/hostur2/unity-template`
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### Setup Project
+1. Open the Terminal and navigate to the `unity-template` folder by using the `cd` command
+   - For example `cd /Users/Steve/Documents/unity-template`
+2. Run the setup script by entering `./setup.sh`
+3. Follow the instructions in the script (allways choose the default option by pressing enter)
+4. After the script finished you can close the Terminal window
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### Setup Unity
+1. Download Unity Hub from the official website ([https://unity3d.com/get-unity/download](https://unity3d.com/get-unity/download))
+2. Run the downloaded file and move it to your Applications folder
+3. Open Unity Hub and go to the `Installs` tab
+4. Select the `Unity 2020.3.16f1 (LTS)` version and install it
+5. In the following dialog add all platforms you want to build for (You can add more later) and if you are using VSCode (Recommended) remove the "Microsoft Visual Studio Community" from the list
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### Setup FMOD
+1. Open the official FMOD Studio website ([https://www.fmod.com/download](https://www.fmod.com/download))
+2. Sign-In or create a new account (It's free but you need to have an account to download FMOD)
+3. Download the **FMOD Studio** Installer for <kbd>v2.02.19 (Unity Verified)</kbd>
+4. Execute the installer and skip through the installation process (You can leave everything as default)
+5. Open the Folder `Project_FMOD` in FMOD Studio
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+### Setup VSCode (Optional)
+*VSCode is a free and open source code editor. It's a very powerful tool and has a lot of extensions to make your life easier. Compared to the legacy Visual Studio it's a lot faster and easier to use. It does need a bit of setup to work with Unity but it's worth it.*
+1. Download VSCode from the official website ([https://code.visualstudio.com](https://code.visualstudio.com))
+2. Run the downloaded file and move it to your Applications folder
+3. After installing VSCode open it and go to the extensions tab <kbd>Ctrl+Shift+X</kbd>
+4. Install following Extensions:
+    - [SuperBehaviour](https://marketplace.visualstudio.com/items?itemName=lom.superbehaviour) (Recommended)
+    - or
+    - [Unity Tools](https://marketplace.visualstudio.com/items?itemName=Tobiah.unity-tools), [Unity Code Snippets](https://marketplace.visualstudio.com/items?itemName=kleber-swf.unity-code-snippets) and [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+5. After installing the extensions close VSCode download the `.NET Framework 4.7.1` (has to be this exact version) from the official website ([https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471](hthttps://dotnet.microsoft.com/en-us/download/dotnet-framework/net471))
+6. Open the Unity Project and go to `Edit > Preferences > External Tools`
+7. Set the "External Script Editor" to "Visual Studio Code"
+8. Set the "External Script Editor Args" to `-n -g "$(File)":$(Line):$(Column)`
+9. Press the <kbd>Regenerate Project Files</kbd> button
+10. Open the VSCode project folder by going to `File > Open Folder` and selecting the `Project_Unity` folder
