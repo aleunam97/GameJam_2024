@@ -42,6 +42,35 @@ namespace=${namespace//[^a-zA-Z0-9.]/}
 read -p "Clean up template files (including this script) after setup? [y/N]: " cleanUp
 cleanUp=${cleanUp:-N}
 
+# Optional Setup Instructions
+instructionDir="$PWD/.template"
+declare -a instructions
+
+for instructionPath in "$instructionDir"/*; do
+    if [ -d "$instructionPath" ]; then
+        instructionName=$(basename "$instructionPath")
+        questionPath="$instructionPath/question.md"
+        scriptPath="$instructionPath/setup.sh"
+        if [ -f "$questionPath" ]; then
+            question=$(<"$questionPath")
+            instructions+=("$instructionName|$scriptPath|$question [y/N]|false")
+        else
+            instructions+=("$instructionName|$scriptPath|Do you want to setup $instructionName? [y/N]|false")
+        fi
+    fi
+done
+
+# Iterate over all instructions and ask the user if he wants to execute them
+for i in "${!instructions[@]}"; do
+    IFS='|' read -r -a instruction <<< "${instructions[$i]}"
+    echo ""
+    read -p "${instruction[2]} " instructionExecute
+    instructionExecute=${instructionExecute:-N}
+    if [[ $instructionExecute == "Y" || $instructionExecute == "y" ]]; then
+        instructions[$i]="${instruction[0]}|${instruction[1]}|${instruction[2]}|true"
+    fi
+done
+
 # Write Start Message
 echo ""
 echo "Starting setup..."
@@ -89,6 +118,15 @@ for item in "${dynamicFileNames[@]}"; do
         sed -i '' "s/$oldString/$newString/g" "$filePath"
     else
         echo "[Skipped] File $filePath not found"
+    fi
+done
+
+# Run optional setup instructions
+for i in "${instructions[@]}"; do
+    IFS='|' read -r -a instruction <<< "$i"
+    if [[ ${instruction[3]} == "true" ]]; then
+        echo "Executing ${instruction[0]} at ${instruction[1]}"
+        bash "${instruction[1]}" "$PWD" "$projectName" "$namespace"
     fi
 done
 

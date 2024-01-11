@@ -45,6 +45,44 @@ if ($LASTEXITCODE -eq 0) { Exit-Script }
 if ($cleanUp -eq "")  { $cleanUp = "N" }
 if ($cleanUp -ne "Y" -and $cleanUp -ne "y" -and $cleanUp -ne "N" -and $cleanUp -ne "n") { Exit-Script }
 
+# Optional Setup Instructions
+$allInstructions = Get-ChildItem -Path "$PSScriptRoot\.template" -Directory
+$instructions = @()
+foreach ($instruction in $allInstructions) {
+    $instructionName = $instruction.Name
+    $instructionPath = "$PSScriptRoot\.template\$instructionName\question.md"
+    $scriptPath = "$PSScriptRoot\.template\$instructionName\setup.ps1"
+    if (Test-Path $instructionPath) {
+        $q = Get-Content $instructionPath;
+        $instructions += @{
+            Name = $instructionName
+            Path = $scriptPath
+            Question = "$q [y/N]"
+            Execute = $false
+        }
+    }
+    else {
+        $instructions += @{
+            Name = $instructionName
+            Path = $scriptPath
+            Question = "Do you want to setup $instructionName? [y/N]"
+            Execute = $false
+        }
+    }
+}
+
+# Iterate over all instructions and ask the user if he wants to execute them
+foreach ($instruction in $instructions) {
+    $instructionQuestion = $instruction.Question
+    $LASTEXITCODE = 1
+    Write-Host ""
+    $instructionExecute = Read-Host $instructionQuestion
+    if ($LASTEXITCODE -eq 0) { Exit-Script }
+    if ($instructionExecute -eq "")  { $instructionExecute = "N" }
+    if ($instructionExecute -ne "Y" -and $instructionExecute -ne "y" -and $instructionExecute -ne "N" -and $instructionExecute -ne "n") { Exit-Script }
+    $instruction.Execute = $instructionExecute -eq "Y" -or $instructionExecute -eq "y"
+}
+
 # Write Start Message
 Write-Host ""
 Write-Host "Starting setup..." -ForegroundColor Green
@@ -65,12 +103,18 @@ foreach ($fileName in $fileNames) {
     $newName = $fileName[1]
     if (Test-Path $oldName) 
     {
-        if (Test-Path $newName) 
+        if ($oldName -ne $newName)
         {
-            Remove-Item $newName -Recurse -Force
+            if (Test-Path $newName) 
+            {
+                Remove-Item $newName -Recurse -Force
+            }
+            Write-Host "Renaming $oldName to $newName"
+            Rename-Item -Path $oldName -NewName $newName
         }
-        Write-Host "Renaming $oldName to $newName"
-        Rename-Item -Path $oldName -NewName $newName
+        else {
+            Write-Host "[Skipped] File $oldName already renamed" -ForegroundColor DarkGray
+        }
     }
     else {
         Write-Host "[Skipped] File $oldName not found" -ForegroundColor DarkGray
@@ -97,6 +141,17 @@ foreach ($fileName in $dynamicFileNames) {
     }
     else {
         Write-Host "[Skipped] File $filePath not found" -ForegroundColor DarkGray
+    }
+}
+
+# Run optional setup instructions
+foreach ($instruction in $instructions) {
+    $instructionName = $instruction.Name
+    $instructionPath = $instruction.Path
+    $instructionExecute = $instruction.Execute
+    if ($instructionExecute) {
+        Write-Host "Executing $instructionName at $instructionPath"
+        & $instructionPath $PSScriptRoot $projectName $namespace
     }
 }
 
