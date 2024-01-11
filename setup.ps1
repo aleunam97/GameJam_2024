@@ -40,9 +40,9 @@ $namespace = $namespace -replace '[^a-zA-Z0-9.]', ''
 # Clean up Template files
 $LASTEXITCODE = 1
 Write-Host ""
-$cleanUp = Read-Host "Clean up template files (including this script) after setup? [y/N]"
+$cleanUp = Read-Host "Clean up template files (including this script) after setup? [Y/n]"
 if ($LASTEXITCODE -eq 0) { Exit-Script }
-if ($cleanUp -eq "")  { $cleanUp = "N" }
+if ($cleanUp -eq "")  { $cleanUp = "Y" }
 if ($cleanUp -ne "Y" -and $cleanUp -ne "y" -and $cleanUp -ne "N" -and $cleanUp -ne "n") { Exit-Script }
 
 # Optional Setup Instructions
