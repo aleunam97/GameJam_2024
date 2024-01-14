@@ -138,6 +138,9 @@ if [[ $cleanUp == "Y" || $cleanUp == "y" ]]; then
             rm "$fileName"
         fi
     done
+    if [ -e ".template" ]; then
+        rm -rf .template
+    fi
     echo ""
     echo "Cleaned up template files"
     echo ""

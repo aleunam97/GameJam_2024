@@ -164,6 +164,10 @@ if ($cleanUp -eq "Y" -or $cleanUp -eq "y") {
             Remove-Item $fileName -Force
         }
     }
+    if (Test-Path "$PSScriptRoot\.template") 
+    {
+        Remove-Item "$PSScriptRoot\.template" -Recurse -Force
+    }
     Write-Host ""
     Write-Host "Cleaned up template files"
     Write-Host ""
