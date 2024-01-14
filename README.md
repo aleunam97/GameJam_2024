@@ -97,7 +97,7 @@
 2. Sign-In or create a new account
 3. Create a new repository by clicking on the <kbd>New</kbd> button
 4. Select the tiny <kbd>Import a repository</kbd> link
-5. Enter `https://gitlab.com/hostur2/unity-templat` into the <kbd>Your old repository’s clone URL</kbd> field
+5. Enter `https://gitlab.com/hostur2/unity-template` into the <kbd>Your old repository’s clone URL</kbd> field
 6. Enter your repository name and click <kbd>Begin import</kbd>
 
 ### Setup Git and clone the repository
@@ -168,7 +168,7 @@
 2. Sign-In or create a new account
 3. Create a new repository by clicking on the <kbd>New</kbd> button
 4. Select the tiny <kbd>Import a repository</kbd> link
-5. Enter `https://gitlab.com/hostur2/unity-templat` into the <kbd>Your old repository’s clone URL</kbd> field
+5. Enter `https://gitlab.com/hostur2/unity-template` into the <kbd>Your old repository’s clone URL</kbd> field
 6. Enter your repository name and click <kbd>Begin import</kbd>
 
 ### Setup Git and clone the repository
