@@ -14,6 +14,7 @@
 | [Installation for experienced users](#installation-for-experienced-users) |
 | [Detailed Installation `Windows`](#detailed-installation-windows) |
 | [Detailed Installation `Mac`](#detailed-installation-mac) |
+| [Contributing](#contributing) |
 
 ## Features
 - Pre-Setup FMOD Project with a basic test event and a basic mixer setup
@@ -215,3 +216,20 @@
 8. Set the "External Script Editor Args" to `-n -g "$(File)":$(Line):$(Column)`
 9. Press the <kbd>Regenerate Project Files</kbd> button
 10. Open the VSCode project folder by going to `File > Open Folder` and selecting the `Template_Unity` folder
+
+## Contributing
+Any contribution is welcome. Please open Merge Requests with fixes or useful additions!
+
+## License
+This template does not include any license file in the repo to prevent users from accidentally shipping theyre product under a wrong lincense. 
+
+This Unity Template URP is licensed under the [MIT open source License](https://opensource.org/license/mit/)
+```
+Copyright 2024 Ivo Keller
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
