@@ -4,31 +4,48 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-public float moveSpeed = 5f;
+    private float Move;
+    public float speed = 5f;
+    public Rigidbody2D playerRigidBody;
 
-public Rigidbody2D playerRigidBody;
-Vector2 movement;
-
+    public Vector2 boxSize;
+    public float castDistance;
+    public LayerMask groundLayer;
 
     void Start()
     {
-        
+    playerRigidBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Move();
+        Move = Input.GetAxisRaw("Horizontal");
+        playerRigidBody.velocity = new Vector2(Move * speed, playerRigidBody.velocity.y);
+
+        if(!isGrounded())
+        {
+            playerRigidBody.velocity = new Vector2(Move * -speed, playerRigidBody.velocity.x);
+        }
     }
 
-void FixedUpdate()
-{
-    playerRigidBody.MovePosition(playerRigidBody.position + movement * moveSpeed * Time.fixedDeltaTime);
-}
-
-    void Move()
+    public bool isGrounded()
     {
-movement.x = Input.GetAxisRaw("Horizontal");
-movement.y = Input.GetAxisRaw("Vertical");
+        if(Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position - transform.up * castDistance,boxSize);
+    }
+
 }
+
+
+
