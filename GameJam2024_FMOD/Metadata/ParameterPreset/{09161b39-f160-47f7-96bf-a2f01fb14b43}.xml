@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{09161b39-f160-47f7-96bf-a2f01fb14b43}">
+		<property name="name">
+			<value>SoundMasker</value>
+		</property>
+		<relationship name="folder">
+			<destination>{510e8e07-6917-42fb-987b-37bc192e5d2a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{832cde3e-24a9-4cc5-9992-240373e9530d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{832cde3e-24a9-4cc5-9992-240373e9530d}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{b0214fa2-d535-4e3f-bfb6-9940c29452fe}</destination>
+		</relationship>
+	</object>
+	<object class="SidechainModulator" id="{b0214fa2-d535-4e3f-bfb6-9940c29452fe}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>cursorPosition</value>
+		</property>
+		<property name="amount">
+			<value>100</value>
+		</property>
+		<property name="attackTime">
+			<value>39</value>
+		</property>
+		<property name="releaseTime">
+			<value>960</value>
+		</property>
+		<relationship name="sidechains">
+			<destination>{203a4275-fb33-4742-abbe-ae0933509163}</destination>
+		</relationship>
+	</object>
+</objects>

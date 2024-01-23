@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{c7fd908a-9379-4304-94ec-518d5d9e8328}">
+		<property name="name">
+			<value>MaskingSounds</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{c13f246f-a843-4200-b47f-48e7b88576c7}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{ebb3f7ea-ccc1-4c8f-b726-58017943a151}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{60c26d7d-dfa8-43a9-8d4b-123688f24fea}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{c13f246f-a843-4200-b47f-48e7b88576c7}">
+		<relationship name="effects">
+			<destination>{e18c0ae7-231b-4ff8-b495-d25a543f9d92}</destination>
+			<destination>{203a4275-fb33-4742-abbe-ae0933509163}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{ebb3f7ea-ccc1-4c8f-b726-58017943a151}" />
+	<object class="MixerBusFader" id="{e18c0ae7-231b-4ff8-b495-d25a543f9d92}" />
+	<object class="Sidechain" id="{203a4275-fb33-4742-abbe-ae0933509163}" />
+</objects>
