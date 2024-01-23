@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Workspace" id="{010119d4-a5eb-4f74-b092-1b10cb665d71}">
 		<property name="builtBanksOutputDirectory">
-			<value>../Template_Unity/Assets/Audio/Banks</value>
+			<value>../GameJam2024_Unity/Assets/Audio/Banks</value>
 		</property>
 		<property name="builtBanksEncryptionKey" />
 		<relationship name="masterEventFolder">
