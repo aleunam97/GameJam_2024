@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{863072af-fa0f-4b02-bc9c-cbcbc0be410d}">
+		<property name="name">
+			<value>isMasked</value>
+		</property>
+		<relationship name="folder">
+			<destination>{510e8e07-6917-42fb-987b-37bc192e5d2a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c1e88ce7-85f1-45c2-92e8-67ff9b03f3ae}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c1e88ce7-85f1-45c2-92e8-67ff9b03f3ae}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

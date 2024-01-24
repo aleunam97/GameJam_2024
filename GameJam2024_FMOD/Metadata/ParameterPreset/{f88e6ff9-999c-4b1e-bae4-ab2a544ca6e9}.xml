@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{f88e6ff9-999c-4b1e-bae4-ab2a544ca6e9}">
+		<property name="name">
+			<value>ClockStartRing</value>
+		</property>
+		<relationship name="folder">
+			<destination>{510e8e07-6917-42fb-987b-37bc192e5d2a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{b42ce1bd-909f-4349-acf8-e4c206e73fba}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{b42ce1bd-909f-4349-acf8-e4c206e73fba}">
+		<property name="maximum">
+			<value>12</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="velocity">
+			<value>-0.30000001192092896</value>
+		</property>
+	</object>
+</objects>

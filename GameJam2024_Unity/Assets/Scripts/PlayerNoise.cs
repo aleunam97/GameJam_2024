@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 public class PlayerNoise : MonoBehaviour
@@ -30,6 +31,12 @@ public class PlayerNoise : MonoBehaviour
         if (!other.CompareTag("NoiseObject"))
             return;
         makesNoise = true;
+        var otherEmitter = other.GetComponent<StudioEventEmitter>();
+
+        //otherEmitter.EventInstance.getParameterByName("isMasked", out float isMasked);
+        //Debug.Log("Played noise with param: " + isMasked);
+        otherEmitter.Play();
+        otherEmitter.SetParameter("isMasked", pendulumScript.currentMaskingValue < noiseThreshold ? 0 : 1);
     }
 
     private void OnTriggerExit2D(Collider2D other)
