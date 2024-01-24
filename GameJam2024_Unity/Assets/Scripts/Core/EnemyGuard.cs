@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyGuard : MonoBehaviour
 {
@@ -10,6 +11,7 @@ private Rigidbody2D enemyRigidbody;
 private Transform currentPoint;
 public float speed;
 
+public GameObject failedText;
 public Player player;
 
     void Start()
@@ -38,6 +40,14 @@ public Player player;
     void GetCaught()
     {
         Debug.Log("See you!");
+        failedText.SetActive(true);
+        Player.freeze = true;
+        Invoke("RestartGame",3);
+    }
+
+    void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void Patrol()
