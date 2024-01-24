@@ -18,7 +18,7 @@ public class HidingSpot : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player" && hidden)
+        if (other.tag == "Player" && !hidden)
         {
             Debug.Log("Hidden!");
             Player.invisible = 1;

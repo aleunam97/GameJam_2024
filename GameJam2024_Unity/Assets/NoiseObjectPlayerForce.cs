@@ -8,6 +8,7 @@ public class NoiseObjectPlayerForce : MonoBehaviour
     private Rigidbody2D playerRb;
     private float xDistance;
     private float force;
+    public float pushForce;
 
     private float playerWalkxDirection;
     private float prevPlayerxPos;
@@ -34,7 +35,7 @@ public class NoiseObjectPlayerForce : MonoBehaviour
         
         force = Math.Sign(xDistance) == Math.Sign(playerWalkxDirection) || playerWalkxDirection == 0 ?  1.0f / xDistance * 20f : 0;
         force = Mathf.Clamp(force, -100, 100);
-        playerRb.AddForce(Vector2.right * force, ForceMode2D.Force);
+        playerRb.AddForce(Vector2.right * force * pushForce, ForceMode2D.Force);
         prevPlayerxPos = currPlayerXPos;
     }
 }

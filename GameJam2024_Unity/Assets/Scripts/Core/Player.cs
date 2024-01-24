@@ -19,17 +19,22 @@ public class Player : MonoBehaviour
 
     public static int invisible = 0;
 
+    public static bool freeze;
+
     void Start()
     {
         playerRigidBody = GetComponent<Rigidbody2D>();
+        freeze = false;
     }
 
     void Update()
     {
+        if(!freeze)
+        {
         Move = Input.GetAxisRaw("Horizontal");
         playerRigidBody.velocity = new Vector2(Move * speed, playerRigidBody.velocity.y);
-
-        GroundCheckMethod();
+        }
+        //GroundCheckMethod();
     }
 
     private void GroundCheckMethod()
