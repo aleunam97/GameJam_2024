@@ -74,6 +74,13 @@ MonoBehaviour:
       Data3: 1906219682
       Data4: -207688010
     Path: event:/SD/ClockTick
+  clockRingEvtRef:
+    Guid:
+      Data1: -755404094
+      Data2: 1186025386
+      Data3: 435900821
+      Data4: -1925630503
+    Path: event:/SD/ClockRing
   currentMaskingValue: 0
 --- !u!1 &6467111671455391572
 GameObject:
