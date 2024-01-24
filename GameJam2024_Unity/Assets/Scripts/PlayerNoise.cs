@@ -24,7 +24,7 @@ public class PlayerNoise : MonoBehaviour
             Debug.LogError("Pendulum not found. Please add.");
             return;
         }
-
+        
         pendulumScript = pendulum.GetComponent<FMODPendulum>();
 
     }

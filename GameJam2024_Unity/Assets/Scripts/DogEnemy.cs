@@ -25,6 +25,7 @@ public class DogEnemy : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
         cachedPlayerObject = null;
+        caught = false;
     }
     
     private void Update()

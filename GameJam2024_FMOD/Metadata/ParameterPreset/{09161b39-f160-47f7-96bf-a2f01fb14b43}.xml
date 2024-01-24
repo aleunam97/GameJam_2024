@@ -38,6 +38,12 @@
 		<property name="releaseTime">
 			<value>960</value>
 		</property>
+		<property name="minimumThreshold">
+			<value>-47</value>
+		</property>
+		<property name="maximumThreshold">
+			<value>-18.5</value>
+		</property>
 		<relationship name="sidechains">
 			<destination>{203a4275-fb33-4742-abbe-ae0933509163}</destination>
 		</relationship>

@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7247340226438169654}
   - component: {fileID: 8206414780067607205}
   m_Layer: 0
-  m_Name: Pendulum
+  m_Name: PendulumSwing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
