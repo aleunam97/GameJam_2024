@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//shift + option + f = autoformat
 public class Player : MonoBehaviour
 {
     private float Move;
@@ -15,6 +16,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform playerFeet;
     [SerializeField] private Transform rayCastOrigin;
     private RaycastHit2D Hit2D;
+
+    public static int invisible = 0;
 
     void Start()
     {

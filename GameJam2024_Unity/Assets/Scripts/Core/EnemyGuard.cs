@@ -10,6 +10,8 @@ private Rigidbody2D enemyRigidbody;
 private Transform currentPoint;
 public float speed;
 
+public Player player;
+
     void Start()
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
@@ -23,9 +25,13 @@ public float speed;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && Player.invisible == 0)
         {
-        GetCaught();
+            GetCaught();
+        }
+        else if (other.tag == "Player" && Player.invisible == 1)
+        {
+            Debug.Log("I don't see you!");
         }
     }
 
