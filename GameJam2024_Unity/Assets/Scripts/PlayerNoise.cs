@@ -6,13 +6,9 @@ using UnityEngine;
 public class PlayerNoise : MonoBehaviour
 {
     private GameObject pendulum;
-
     private FMODPendulum pendulumScript;
-
-    public bool makesUnmaskedNoise;
-
-    private bool makesNoise;
-
+    [NonSerialized] public bool makesUnmaskedNoise;
+    [NonSerialized] public bool makesNoise;
     [SerializeField] private float noiseThreshold = 0.5f;
     
     // Start is called before the first frame update
