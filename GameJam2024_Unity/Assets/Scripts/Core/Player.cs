@@ -12,9 +12,13 @@ public class Player : MonoBehaviour
     public float castDistance;
     public LayerMask groundLayer;
 
+    [SerializeField] private Transform playerFeet;
+    [SerializeField] private Transform rayCastOrigin;
+    private RaycastHit2D Hit2D;
+
     void Start()
     {
-    playerRigidBody = GetComponent<Rigidbody2D>();
+        playerRigidBody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -22,9 +26,18 @@ public class Player : MonoBehaviour
         Move = Input.GetAxisRaw("Horizontal");
         playerRigidBody.velocity = new Vector2(Move * speed, playerRigidBody.velocity.y);
 
-        if(!isGrounded())
+        GroundCheckMethod();
+    }
+
+    private void GroundCheckMethod()
+    {
+        Hit2D = Physics2D.Raycast(rayCastOrigin.position, -Vector2.up, 100f, groundLayer);
+
+        if(Hit2D != false)
         {
-            playerRigidBody.velocity = new Vector2(Move * -speed, playerRigidBody.velocity.x);
+            Vector2 temp = playerFeet.position;
+            temp.y = Hit2D.point.y;
+            playerFeet.position = temp;
         }
     }
 
@@ -42,7 +55,7 @@ public class Player : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(transform.position - transform.up * castDistance,boxSize);
+        Gizmos.DrawWireCube(transform.position - transform.up * castDistance, boxSize);
     }
 
 }
