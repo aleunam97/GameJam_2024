@@ -29,6 +29,8 @@ public class NoiseObjectPlayerForce : MonoBehaviour
     {
         if (!other.CompareTag("Player"))
             return;
+        if (Player.freeze)
+            return;
         var currPlayerXPos = playerRb.transform.position.x;
         playerWalkxDirection = currPlayerXPos - prevPlayerxPos;
         xDistance = (currPlayerXPos - transform.position.x );

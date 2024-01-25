@@ -29,7 +29,7 @@ public class DogEnemy : MonoBehaviour
     {
         if (!other.CompareTag("Player"))
             return;
-        if (cachedPlayerNoise.makesUnmaskedNoise && !caught)
+        if (cachedPlayerNoise.CheckUnmasked() && !caught)
         {
             Debug.Log("Dog eats you...");
             caught = true;

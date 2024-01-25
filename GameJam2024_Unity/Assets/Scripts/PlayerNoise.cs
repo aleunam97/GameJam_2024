@@ -8,8 +8,8 @@ public class PlayerNoise : MonoBehaviour
 {
     private GameObject pendulum;
     private FMODPendulum pendulumScript;
-    [NonSerialized] public bool makesUnmaskedNoise;
-    [NonSerialized] public bool makesNoise;
+    public bool makesUnmaskedNoise;
+    public bool makesNoise;
     [SerializeField] private float noiseThreshold = 0.5f;
     
     // Start is called before the first frame update
@@ -52,5 +52,10 @@ public class PlayerNoise : MonoBehaviour
             return;
 
         makesUnmaskedNoise = makesNoise && pendulumScript.currentMaskingValue < noiseThreshold;
+    }
+
+    public bool CheckUnmasked()
+    {
+        return makesNoise && pendulumScript.currentMaskingValue < noiseThreshold;
     }
 }
