@@ -25,11 +25,11 @@ public Player player;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player" && Player.invisible == 0)
+        if(other.tag == "Player" && Player.invisible == 0 && Player.hasMask == 0)
         {
             GetCaught();
         }
-        else if (other.tag == "Player" && Player.invisible == 1)
+        else if (other.tag == "Player" && (Player.invisible == 1 || Player.hasMask == 1))
         {
             Debug.Log("I don't see you!");
         }
