@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{93d86884-25ad-49dc-8737-24e250a794ea}">
+		<property name="assetPath">
+			<value>SFX/Guard/WGJCT_SFX_Steps_Impact_1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.46472916666666669</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f736e60e-529d-41eb-b921-a4bc0551b69f}</destination>
+		</relationship>
+	</object>
+</objects>

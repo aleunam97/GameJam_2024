@@ -103,6 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5989603429942724184}
+  - component: {fileID: 7516155082280926469}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -127,6 +128,37 @@ Transform:
   - {fileID: 1312408070822599648}
   m_Father: {fileID: 5806669920472139205}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7516155082280926469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3460497790398342634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 602746458
+      Data2: 1114623619
+      Data3: -512141439
+      Data4: 201581726
+    Path: event:/SD/Player/Steps
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 40
 --- !u!1 &4269536727440517763
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d9f2897f-a62b-4d57-ab3a-5acb600fc9a5}">
+		<property name="assetPath">
+			<value>SFX/Character/WGJCT_SFX_Comp1_Step1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.19841666666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f736e60e-529d-41eb-b921-a4bc0551b69f}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -46,7 +46,7 @@ public class PlayerNoise : MonoBehaviour
         makesNoise = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!pendulumScript)
             return;

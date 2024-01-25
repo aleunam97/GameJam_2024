@@ -67,14 +67,14 @@ public class FMODPendulum : MonoBehaviour
 
     public void MusicStartSync()
     {
-        Debug.Log("Start");
+        //Debug.Log("Start");
         if (midCounter != 0)
             musicController.MusicStartSync();
     }
     
     public void MusicMidSync()
     {
-        Debug.Log("Mid: Coutner: " + midCounter);
+        //Debug.Log("Mid: Coutner: " + midCounter);
         //if(midCounter++ % 2 == 0)
         musicController.MusicMidSync();
     }

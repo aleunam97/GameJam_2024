@@ -25,6 +25,22 @@ public class DogEnemy : MonoBehaviour
         catchable = true;
     }
 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player"))
+            return;
+        if (cachedPlayerNoise.makesUnmaskedNoise && !caught)
+        {
+            Debug.Log("Dog eats you...");
+            caught = true;
+            failedText.SetActive(true);
+            Player.freeze = true;
+            FMODUnity.RuntimeManager.PlayOneShot(barkRef, transform.position);
+            snoreEmitter.Stop();
+            Invoke("RestartGame", 3);
+        }
+    }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -39,16 +55,7 @@ public class DogEnemy : MonoBehaviour
         if (!catchable)
             return;
         
-        if (cachedPlayerNoise.makesUnmaskedNoise && !caught)
-        {
-            Debug.Log("Dog eats you...");
-            caught = true;
-            failedText.SetActive(true);
-            Player.freeze = true;
-            FMODUnity.RuntimeManager.PlayOneShot(barkRef, transform.position);
-            snoreEmitter.Stop();
-            Invoke("RestartGame", 3);
-        }
+        
     }
 
     void RestartGame()
