@@ -27,6 +27,7 @@ public class Masquerade : MonoBehaviour
             Player.hasMask = 1;
             spriteHat.enabled = true;
             hatOnPillar.SetTrigger("PickUpHat");
+            FMODUnity.RuntimeManager.PlayOneShot("{d676b138-f165-4cd3-bc42-11b49e19ce84}", transform.position);
 
             Debug.Log("Player has Mask!");
         }

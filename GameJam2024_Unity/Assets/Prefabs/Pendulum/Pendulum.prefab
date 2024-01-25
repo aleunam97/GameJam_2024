@@ -250,6 +250,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083074975074191249, guid: 2d158a86e562b52428ebd9876752bdf4,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083074975074191249, guid: 2d158a86e562b52428ebd9876752bdf4,
+        type: 3}
       propertyPath: m_Name
       value: Swoosh3
       objectReference: {fileID: 0}
@@ -324,6 +329,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083074975074191249, guid: 2d158a86e562b52428ebd9876752bdf4,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083074975074191249, guid: 2d158a86e562b52428ebd9876752bdf4,
+        type: 3}
       propertyPath: m_Name
       value: Swoosh2
       objectReference: {fileID: 0}
@@ -395,6 +405,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083074975074191249, guid: 2d158a86e562b52428ebd9876752bdf4,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7083074975074191249, guid: 2d158a86e562b52428ebd9876752bdf4,
         type: 3}

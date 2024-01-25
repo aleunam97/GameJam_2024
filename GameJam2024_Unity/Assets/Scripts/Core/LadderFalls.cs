@@ -22,4 +22,14 @@ public class LadderFalls : MonoBehaviour
         ladderAnim.SetTrigger("LadderTriggered");
         collider2DLadder.enabled = false; 
     }
+
+    public void PlayLadderDrop()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("{fe0e429b-a0da-401a-b0c7-8a809227fcbc}", transform.GetChild(0).transform.position);
+    }
+    
+    public void PlayLadderImpact()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("{c0fc5391-e9ee-4d70-9a0a-44cbd8cc79ed}", transform.GetChild(0).transform.position);
+    }
 }
