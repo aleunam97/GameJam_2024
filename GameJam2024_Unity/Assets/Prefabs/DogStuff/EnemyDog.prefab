@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6335031197385720376}
   - component: {fileID: 1024605788416323436}
+  - component: {fileID: 5751171175908776205}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -5
-  m_Sprite: {fileID: 21300000, guid: 4629c7c6845a145d6848b3c99e204435, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 848e4bebceea7424c9f31b97d478080f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +85,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5751171175908776205
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543029343541614088}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8ba4d3091d8d47b5bd6b4bdf8e9254a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5452742018284140792
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +117,7 @@ GameObject:
   - component: {fileID: 2372087282281854250}
   - component: {fileID: 6000280619701087811}
   - component: {fileID: 1664641398396714859}
-  - component: {fileID: -4316095462661883326}
+  - component: {fileID: 139064259416882711}
   m_Layer: 0
   m_Name: EnemyDog
   m_TagString: Untagged
@@ -132,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failedText: {fileID: 0}
-  snoreEmitter: {fileID: -4316095462661883326}
+  snoreEmitter: {fileID: 139064259416882711}
   barkRef:
     Guid:
       Data1: -1577838225
@@ -185,7 +207,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8, y: 2}
   m_EdgeRadius: 0
---- !u!114 &-4316095462661883326
+--- !u!114 &139064259416882711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
