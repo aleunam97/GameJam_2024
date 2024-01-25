@@ -18,6 +18,11 @@ public class FMODMusic : MonoBehaviour
         musicSubOffID = parDesc.id;
     }
 
+    private void OnDestroy()
+    {
+        musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
     public void MusicStartSync()
     {
         musicInstance.keyOff();
