@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2b2d3015-62f5-4a2a-adf8-e933a9cc7b96}">
+		<property name="assetPath">
+			<value>Music/Mid/WGJCT_Mus_Pno_Mid_D4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f736e60e-529d-41eb-b921-a4bc0551b69f}</destination>
+		</relationship>
+	</object>
+</objects>

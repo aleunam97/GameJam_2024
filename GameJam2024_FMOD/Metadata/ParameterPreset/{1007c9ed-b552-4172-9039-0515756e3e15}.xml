@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{1007c9ed-b552-4172-9039-0515756e3e15}">
+		<property name="name">
+			<value>ContinueMel</value>
+		</property>
+		<relationship name="folder">
+			<destination>{510e8e07-6917-42fb-987b-37bc192e5d2a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{21e691f9-a4f1-404a-93db-e6d0dc6fc7a9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{21e691f9-a4f1-404a-93db-e6d0dc6fc7a9}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="velocity">
+			<value>-0.90000003576278687</value>
+		</property>
+	</object>
+</objects>

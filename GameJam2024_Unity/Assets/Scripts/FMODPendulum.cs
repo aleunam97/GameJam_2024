@@ -21,8 +21,9 @@ public class FMODPendulum : MonoBehaviour
 
     private int pendulumCounter = 11;
     private int chimesCount = 0;
-    
-    
+
+    private FMODMusic musicController;
+    private int midCounter;
 
     public float currentMaskingValue;
 
@@ -38,6 +39,7 @@ public class FMODPendulum : MonoBehaviour
         RuntimeManager.AttachInstanceToGameObject(clockRing, transform);
         maskingID = maskDescr.id;
 
+        musicController = GameObject.Find("MusicGlobal").GetComponent<FMODMusic>();
     }
 
     private void OnDestroy()
@@ -61,5 +63,19 @@ public class FMODPendulum : MonoBehaviour
     private void Update()
     {
         RuntimeManager.StudioSystem.getParameterByID(maskingID, out _, out currentMaskingValue);
+    }
+
+    public void MusicStartSync()
+    {
+        Debug.Log("Start");
+        if (midCounter != 0)
+            musicController.MusicStartSync();
+    }
+    
+    public void MusicMidSync()
+    {
+        Debug.Log("Mid: Coutner: " + midCounter);
+        //if(midCounter++ % 2 == 0)
+        musicController.MusicMidSync();
     }
 }
