@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public static int hasMask = 0;
 
     public static bool freeze;
+    public Animator playerAnim;
 
     void Start()
     {
@@ -35,6 +36,15 @@ public class Player : MonoBehaviour
         Move = Input.GetAxisRaw("Horizontal");
         playerRigidBody.velocity = new Vector2(Move * speed, playerRigidBody.velocity.y);
         }
+        playerAnim.SetFloat("Speed", Move);
+
+        if (Move == 0)
+        {
+            playerAnim.SetTrigger("NotMoving");
+        } else {
+            playerAnim.ResetTrigger("NotMoving");
+        }
+
         //GroundCheckMethod();
     }
 
