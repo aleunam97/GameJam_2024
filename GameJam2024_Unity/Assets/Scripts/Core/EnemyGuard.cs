@@ -14,6 +14,8 @@ public float speed;
 public GameObject failedText;
 public Player player;
 
+public FMODUnity.EventReference guardCaughtSoundRef;
+
     void Start()
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
@@ -42,6 +44,7 @@ public Player player;
         Debug.Log("See you!");
         failedText.SetActive(true);
         Player.freeze = true;
+        FMODUnity.RuntimeManager.PlayOneShot(guardCaughtSoundRef, transform.position);
         Invoke("RestartGame",3);
     }
 

@@ -224,6 +224,13 @@ MonoBehaviour:
   speed: 2
   failedText: {fileID: 0}
   player: {fileID: 0}
+  guardCaughtSoundRef:
+    Guid:
+      Data1: 959657208
+      Data2: 1233753751
+      Data3: -742568524
+      Data4: 1457500583
+    Path: event:/SD/Enemies/GuardFound
 --- !u!61 &745498623860231043
 BoxCollider2D:
   m_ObjectHideFlags: 0
