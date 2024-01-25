@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2372087282281854250}
   - component: {fileID: 6000280619701087811}
   - component: {fileID: 1664641398396714859}
+  - component: {fileID: -4316095462661883326}
   m_Layer: 0
   m_Name: EnemyDog
   m_TagString: Untagged
@@ -130,6 +131,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c4b0a18e923d843be9f0b7e5f13345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  failedText: {fileID: 0}
+  snoreEmitter: {fileID: -4316095462661883326}
+  barkRef:
+    Guid:
+      Data1: -1577838225
+      Data2: 1335896555
+      Data3: -2042031970
+      Data4: -585312172
+    Path: event:/SD/Enemies/DogBark
 --- !u!61 &1664641398396714859
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -175,3 +185,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &-4316095462661883326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5452742018284140792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -400977420
+      Data2: 1139495799
+      Data3: -456657001
+      Data4: -1336071293
+    Path: event:/SD/Enemies/DogSnore
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

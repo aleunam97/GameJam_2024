@@ -33,6 +33,9 @@
 		<relationship name="timeline">
 			<destination>{5a6863f1-ac6a-4edb-a528-038dbb2884d2}</destination>
 		</relationship>
+		<relationship name="parameters">
+			<destination>{4f177660-a969-468d-8351-56f81f6924a2}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{e3f30693-c218-4f02-9ff2-3f23bb79c111}</destination>
 		</relationship>
@@ -95,6 +98,11 @@
 			<destination>{d6c2641e-c583-4876-a006-df4d7438e9a2}</destination>
 			<destination>{5cd56922-d395-44ce-99cd-fd53eaddf066}</destination>
 			<destination>{c12a5c39-e089-4710-a585-1ce5457e210a}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProxy" id="{4f177660-a969-468d-8351-56f81f6924a2}">
+		<relationship name="preset">
+			<destination>{d0276fae-b6ef-4c2d-ab1f-723cba563265}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f8268bb1-dd5d-4378-8b27-73e73272ca3c}">
@@ -405,6 +413,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{2810f3e4-8d89-42b7-a0e8-f50b162e7bf5}">
 		<relationship name="effects">
+			<destination>{4b3971bd-8328-4f78-881e-7f9fcd68c198}</destination>
 			<destination>{2e481bbe-f62d-4458-a75c-d2980ee654c2}</destination>
 		</relationship>
 	</object>
@@ -629,6 +638,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e097bebd-b49c-4391-855f-a45118279de3}" />
+	<object class="MultibandEqEffect" id="{4b3971bd-8328-4f78-881e-7f9fcd68c198}">
+		<property name="frequencyA">
+			<value>22000</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{2e481bbe-f62d-4458-a75c-d2980ee654c2}" />
 	<object class="ParameterProperty" id="{b3e17e59-e553-45e2-b7ee-87a868934439}">
 		<relationship name="parameter">
