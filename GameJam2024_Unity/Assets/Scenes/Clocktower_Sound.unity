@@ -876,6 +876,8 @@ MonoBehaviour:
   pointA: {fileID: 412218885}
   pointB: {fileID: 140949759}
   speed: 3
+  failedText: {fileID: 0}
+  player: {fileID: 0}
 --- !u!4 &348127750
 Transform:
   m_ObjectHideFlags: 0
@@ -4046,37 +4048,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8878325984598370267, guid: 2606a1fd8cc8c5446a7444f2a819068e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5897952165555350856}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2606a1fd8cc8c5446a7444f2a819068e, type: 3}
---- !u!1 &5897952165555350855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8878325984598370267, guid: 2606a1fd8cc8c5446a7444f2a819068e,
-    type: 3}
-  m_PrefabInstance: {fileID: 5897952165555350854}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5897952165555350856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5897952165555350855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbacc93bdc01bb459817a879f28d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicRef:
-    Guid:
-      Data1: 1765657154
-      Data2: 1116085931
-      Data3: 89203362
-      Data4: 994451739
-    Path: event:/Music/Music
 --- !u!1001 &6132910206853622557
 PrefabInstance:
   m_ObjectHideFlags: 0
