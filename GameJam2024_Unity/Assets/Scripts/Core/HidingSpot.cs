@@ -20,7 +20,6 @@ public class HidingSpot : MonoBehaviour
     {
         if (other.tag == "Player" && !hidden)
         {
-            Debug.Log("Hidden!");
             Player.invisible = 1;
             hidden = true;
 
@@ -31,7 +30,6 @@ public class HidingSpot : MonoBehaviour
     {
         if (other.tag == "Player" && hidden)
         {
-            Debug.Log("Unhidden!");
             Player.invisible = 0;
             hidden = false;
         }

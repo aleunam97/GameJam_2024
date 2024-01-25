@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     private RaycastHit2D Hit2D;
 
     public static int invisible = 0;
+    public static int hasMask = 0;
 
     public static bool freeze;
 

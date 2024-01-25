@@ -564,12 +564,12 @@ PrefabInstance:
     - target: {fileID: 5803142526592927561, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.99
+      value: 5.39
       objectReference: {fileID: 0}
     - target: {fileID: 5803142526592927561, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.89
+      value: 31.99
       objectReference: {fileID: 0}
     - target: {fileID: 5803142526592927561, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
@@ -634,7 +634,7 @@ PrefabInstance:
     - target: {fileID: 6854594776146796419, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.24
+      value: 9.44
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4568104771976269057, guid: 15ad91042eb874e7cbb7d8c130b589f8, type: 3}
@@ -37042,7 +37042,7 @@ PrefabInstance:
     - target: {fileID: 5803142526592927561, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 5803142526592927561, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
@@ -42980,6 +42980,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyDog (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6000280619701087811, guid: 88769c65ad6f1cb44bc3fea5eec75b87,
+        type: 3}
+      propertyPath: failedText
+      value: 
+      objectReference: {fileID: 953990520}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43448,7 +43453,7 @@ PrefabInstance:
     - target: {fileID: 5803142526592927561, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 32.13
+      value: 32.01
       objectReference: {fileID: 0}
     - target: {fileID: 5803142526592927561, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
@@ -44174,6 +44179,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyDog (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6000280619701087811, guid: 88769c65ad6f1cb44bc3fea5eec75b87,
+        type: 3}
+      propertyPath: failedText
+      value: 
+      objectReference: {fileID: 953990520}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45555,7 +45565,7 @@ PrefabInstance:
     - target: {fileID: 2372087282281854250, guid: 88769c65ad6f1cb44bc3fea5eec75b87,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.89
+      value: 8.97
       objectReference: {fileID: 0}
     - target: {fileID: 2372087282281854250, guid: 88769c65ad6f1cb44bc3fea5eec75b87,
         type: 3}
@@ -45602,6 +45612,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyDog
       objectReference: {fileID: 0}
+    - target: {fileID: 6000280619701087811, guid: 88769c65ad6f1cb44bc3fea5eec75b87,
+        type: 3}
+      propertyPath: failedText
+      value: 
+      objectReference: {fileID: 953990520}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46101,6 +46116,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1831398665}
   - component: {fileID: 1831398666}
+  - component: {fileID: 1831398667}
+  - component: {fileID: 1831398668}
   m_Layer: 0
   m_Name: Masquerade
   m_TagString: Untagged
@@ -46117,7 +46134,7 @@ Transform:
   m_GameObject: {fileID: 1831398664}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.287527, y: 8.932532, z: 3.5173059}
+  m_LocalPosition: {x: 8.287527, y: 8.932532, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46175,6 +46192,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1831398667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831398664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c55d80de04174fd595199b4e1e1cfe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+--- !u!58 &1831398668
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831398664}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1001 &1843978232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46315,7 +46380,7 @@ PrefabInstance:
     - target: {fileID: 5803142526592927561, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.11
+      value: 16.02
       objectReference: {fileID: 0}
     - target: {fileID: 5803142526592927561, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
@@ -46419,8 +46484,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  failedText: {fileID: 0}
-  player: {fileID: 0}
+  failedText: {fileID: 953990520}
+  player: {fileID: 896469195}
 --- !u!4 &1956303887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7034944474395624400, guid: 69462065dfcaa4441a9027c61126b459,
@@ -46707,6 +46772,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyDog (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6000280619701087811, guid: 88769c65ad6f1cb44bc3fea5eec75b87,
+        type: 3}
+      propertyPath: failedText
+      value: 
+      objectReference: {fileID: 953990520}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46785,7 +46855,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -48934,7 +49004,7 @@ PrefabInstance:
     - target: {fileID: 2719459017846520901, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.95
+      value: 2.59
       objectReference: {fileID: 0}
     - target: {fileID: 4568104771976269057, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
@@ -48954,7 +49024,7 @@ PrefabInstance:
     - target: {fileID: 5803142526592927561, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5803142526592927561, guid: 15ad91042eb874e7cbb7d8c130b589f8,
         type: 3}
