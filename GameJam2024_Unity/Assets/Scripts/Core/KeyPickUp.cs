@@ -22,7 +22,7 @@ public class KeyPickUp : MonoBehaviour
         {
             DoorLocked.hasKey = 1;
             Debug.Log("Player has Key!");
-
+            FMODUnity.RuntimeManager.PlayOneShot("{b3bc50b2-934d-4738-ac0d-1d98899e8357}", transform.position);
             Destroy(gameObject);
         }
     }

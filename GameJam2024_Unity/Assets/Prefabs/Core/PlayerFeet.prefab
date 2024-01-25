@@ -217,6 +217,7 @@ MonoBehaviour:
     m_Bits: 64
   playerFeet: {fileID: 8238167771767289028}
   rayCastOrigin: {fileID: 5746404376258527703}
+  playerAnim: {fileID: 0}
 --- !u!212 &6319885605194635111
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -343,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9006eca9d4f75674295cb9d96f95e6e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noiseThreshold: 0.5
+  noiseThreshold: 0.3
 --- !u!1 &5762337583676871567
 GameObject:
   m_ObjectHideFlags: 0

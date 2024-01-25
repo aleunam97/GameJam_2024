@@ -10,6 +10,7 @@ public class DogEnemy : MonoBehaviour
     private GameObject cachedPlayerObject;
     private PlayerNoise cachedPlayerNoise;
 
+    private bool catchable;
     private bool caught;
     public GameObject failedText;
 
@@ -20,10 +21,9 @@ public class DogEnemy : MonoBehaviour
     {
         if (!other.CompareTag("Player"))
             return;
-        cachedPlayerObject = other.gameObject;
         if (!cachedPlayerNoise)
             cachedPlayerNoise = other.gameObject.GetComponent<PlayerNoise>();
-        
+        catchable = true;
     }
 
 
@@ -33,11 +33,12 @@ public class DogEnemy : MonoBehaviour
             return;
         cachedPlayerObject = null;
         caught = false;
+        catchable = false;
     }
 
     private void Update()
     {
-        if (!cachedPlayerObject)
+        if (!catchable)
             return;
         
         if (cachedPlayerNoise.makesUnmaskedNoise && !caught)
