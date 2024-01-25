@@ -18,8 +18,6 @@ public class KeyPickUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Player in range.");
-
         if (other.tag == "Player")
         {
             DoorLocked.hasKey = 1;

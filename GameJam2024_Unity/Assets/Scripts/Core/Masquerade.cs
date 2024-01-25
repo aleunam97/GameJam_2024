@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 public class Masquerade : MonoBehaviour
 {
     public Player player;
+    public GameObject masquerade;
+    public SpriteRenderer spriteHat;
+    public Animator hatOnPillar;
 
     void Start()
     {
+        spriteHat = masquerade.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -21,6 +25,9 @@ public class Masquerade : MonoBehaviour
         if (other.tag == "Player")
         {
             Player.hasMask = 1;
+            spriteHat.enabled = true;
+            hatOnPillar.SetTrigger("PickUpHat");
+
             Debug.Log("Player has Mask!");
         }
     }
