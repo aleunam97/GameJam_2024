@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//shift + option + f = autoformat
 public class Player : MonoBehaviour
 {
     private float Move;
@@ -16,17 +17,35 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform rayCastOrigin;
     private RaycastHit2D Hit2D;
 
+    public static int invisible = 0;
+    public static int hasMask = 0;
+
+    public static bool freeze;
+    public Animator playerAnim;
+
     void Start()
     {
         playerRigidBody = GetComponent<Rigidbody2D>();
+        freeze = false;
     }
 
     void Update()
     {
+        if(!freeze)
+        {
         Move = Input.GetAxisRaw("Horizontal");
         playerRigidBody.velocity = new Vector2(Move * speed, playerRigidBody.velocity.y);
+        }
+        playerAnim.SetFloat("Speed", Move);
 
-        GroundCheckMethod();
+        if (Move == 0)
+        {
+            playerAnim.SetTrigger("NotMoving");
+        } else {
+            playerAnim.ResetTrigger("NotMoving");
+        }
+
+        //GroundCheckMethod();
     }
 
     private void GroundCheckMethod()

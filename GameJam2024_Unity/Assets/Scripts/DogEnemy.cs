@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DogEnemy : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class DogEnemy : MonoBehaviour
     private PlayerNoise cachedPlayerNoise;
 
     private bool caught;
+    public GameObject failedText;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player"))
             return;
         cachedPlayerObject = other.gameObject;
-        if(!cachedPlayerNoise)
+        if (!cachedPlayerNoise)
             cachedPlayerNoise = other.gameObject.GetComponent<PlayerNoise>();
     }
 
@@ -27,7 +30,7 @@ public class DogEnemy : MonoBehaviour
         cachedPlayerObject = null;
         caught = false;
     }
-    
+
     private void Update()
     {
         if (!cachedPlayerObject)
@@ -37,6 +40,14 @@ public class DogEnemy : MonoBehaviour
         {
             Debug.Log("Dog eats you...");
             caught = true;
+            failedText.SetActive(true);
+            Player.freeze = true;
+            Invoke("RestartGame", 3);
         }
+    }
+
+    void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
