@@ -27,6 +27,7 @@ public class DoorLocked : MonoBehaviour
         {
             Debug.Log("Player opens Door.");
             openDoorAnim.SetTrigger("DoorOpened");
+            FMODUnity.RuntimeManager.PlayOneShot("{165ba1b1-35e7-4680-b45d-045d468f8621}", transform.position);
             collider2DDoor.enabled = false;
         }
     }

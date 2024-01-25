@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class DogEnemy : MonoBehaviour
 {
-    private GameObject cachedPlayerObject;
     private PlayerNoise cachedPlayerNoise;
 
     private bool catchable;
@@ -31,7 +30,6 @@ public class DogEnemy : MonoBehaviour
     {
         if (!other.CompareTag("Player"))
             return;
-        cachedPlayerObject = null;
         caught = false;
         catchable = false;
     }
