@@ -38,8 +38,9 @@ public class FMODPendulum : MonoBehaviour
         clockRing.start();
         RuntimeManager.AttachInstanceToGameObject(clockRing, transform);
         maskingID = maskDescr.id;
-
-        musicController = GameObject.Find("MusicGlobal").GetComponent<FMODMusic>();
+        var music = GameObject.Find("MusicGlobal");
+        if(music)
+            musicController = music.GetComponent<FMODMusic>();
     }
 
     private void OnDestroy()
@@ -67,6 +68,8 @@ public class FMODPendulum : MonoBehaviour
 
     public void MusicStartSync()
     {
+        if (!musicController)
+            return;
         //Debug.Log("Start");
         if (midCounter != 0)
             musicController.MusicStartSync();
@@ -74,6 +77,8 @@ public class FMODPendulum : MonoBehaviour
     
     public void MusicMidSync()
     {
+        if (!musicController)
+            return;
         //Debug.Log("Mid: Coutner: " + midCounter);
         //if(midCounter++ % 2 == 0)
         musicController.MusicMidSync();
