@@ -5,6 +5,7 @@ using UnityEngine;
 public class KeyPickUp : MonoBehaviour
 {
     public DoorLocked doorLocked;
+    public GameObject keyIcon;
 
     void Start()
     {
@@ -23,6 +24,8 @@ public class KeyPickUp : MonoBehaviour
             DoorLocked.hasKey = 1;
             Debug.Log("Player has Key!");
             FMODUnity.RuntimeManager.PlayOneShot("{b3bc50b2-934d-4738-ac0d-1d98899e8357}", transform.position);
+            keyIcon.SetActive(true);
+
             Destroy(gameObject);
         }
     }

@@ -52940,7 +52940,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openDoorAnim: {fileID: 226074342}
-  collider2DDoor: {fileID: 0}
+  collider2DDoor: {fileID: 226074341}
+  keyIcon: {fileID: 320880776}
 --- !u!4 &247805464 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2983210542869822257, guid: 7fbda6431dc90489c9985319e754d2a5,
@@ -60863,6 +60864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorLocked: {fileID: 1596204032}
+  keyIcon: {fileID: 320880776}
 --- !u!4 &786324713
 Transform:
   m_ObjectHideFlags: 0
@@ -64685,7 +64687,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openDoorAnim: {fileID: 1596204030}
-  collider2DDoor: {fileID: 0}
+  collider2DDoor: {fileID: 226074341}
+  keyIcon: {fileID: 320880776}
 --- !u!4 &1596204033
 Transform:
   m_ObjectHideFlags: 0
@@ -68809,11 +68812,6 @@ PrefabInstance:
       propertyPath: m_text
       value: Main Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 4437304916913106239, guid: 276ecd28db6fde842be5553ed6f7c6a3,
-        type: 3}
-      propertyPath: m_Name
-      value: Button
-      objectReference: {fileID: 0}
     - target: {fileID: 3575048123867338030, guid: 276ecd28db6fde842be5553ed6f7c6a3,
         type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -68918,6 +68916,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437304916913106239, guid: 276ecd28db6fde842be5553ed6f7c6a3,
+        type: 3}
+      propertyPath: m_Name
+      value: Button
       objectReference: {fileID: 0}
     - target: {fileID: 8365396736463814006, guid: 2555240d94a504fb0bd3eb35e12463e9,
         type: 3}
