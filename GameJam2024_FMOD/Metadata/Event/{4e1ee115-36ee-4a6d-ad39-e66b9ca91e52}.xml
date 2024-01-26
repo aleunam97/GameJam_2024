@@ -129,7 +129,10 @@
 			<value>1.4998708677685952</value>
 		</property>
 		<property name="length">
-			<value>4</value>
+			<value>3.8751291322314048</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>0.12487086776859524</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{6de7b3d5-b02b-4aee-a8b3-ee1f72c18e14}</destination>
@@ -266,7 +269,7 @@
 	</object>
 	<object class="AutomationPoint" id="{9f499c8d-db89-4173-b2d1-4ce6d1dc16ef}">
 		<property name="position">
-			<value>2.234375</value>
+			<value>2.2343750000000004</value>
 		</property>
 		<property name="value">
 			<value>1</value>

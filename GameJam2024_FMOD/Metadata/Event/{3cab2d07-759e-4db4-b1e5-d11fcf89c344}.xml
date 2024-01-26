@@ -129,7 +129,10 @@
 			<value>1.4998708677685952</value>
 		</property>
 		<property name="length">
-			<value>4</value>
+			<value>3.961781521843724</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>0.038218478156276214</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{3c048453-3334-41e8-b051-a73bd789528a}</destination>
