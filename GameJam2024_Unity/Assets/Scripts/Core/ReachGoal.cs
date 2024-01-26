@@ -25,6 +25,7 @@ public class ReachGoal : MonoBehaviour
             //SceneManager.LoadScene(2);
             winScreen.SetActive(true);
             Player.freeze = true;
+            Player.invisible = 1;
         }
     }
 }
