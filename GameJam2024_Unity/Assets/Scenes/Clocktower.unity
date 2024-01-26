@@ -564,6 +564,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fbda6431dc90489c9985319e754d2a5, type: 3}
+--- !u!1 &57418326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4437304916913106239, guid: 276ecd28db6fde842be5553ed6f7c6a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1511149396808153774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &59360109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61704,7 +61710,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -7
   m_Sprite: {fileID: 21300000, guid: 272e45ba70b3444c58001ba36fc0ab4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -65639,7 +65645,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -6
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -68877,6 +68883,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 11704822}
     m_Modifications:
+    - target: {fileID: 372828566220536482, guid: 276ecd28db6fde842be5553ed6f7c6a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 372828566220536482, guid: 276ecd28db6fde842be5553ed6f7c6a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 372828566220536482, guid: 276ecd28db6fde842be5553ed6f7c6a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4103156077267486149}
+    - target: {fileID: 372828566220536482, guid: 276ecd28db6fde842be5553ed6f7c6a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 372828566220536482, guid: 276ecd28db6fde842be5553ed6f7c6a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 372828566220536482, guid: 276ecd28db6fde842be5553ed6f7c6a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 372828566220536482, guid: 276ecd28db6fde842be5553ed6f7c6a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3575048123867338030, guid: 276ecd28db6fde842be5553ed6f7c6a3,
         type: 3}
       propertyPath: m_text
@@ -69000,7 +69041,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4437304916913106239, guid: 276ecd28db6fde842be5553ed6f7c6a3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4103156077267486149}
   m_SourcePrefab: {fileID: 100100000, guid: 276ecd28db6fde842be5553ed6f7c6a3, type: 3}
 --- !u!1001 &3015383671933353197
 PrefabInstance:
@@ -69189,6 +69234,19 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1511149396808153774}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4103156077267486149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57418326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aafacffdff62b41dc8f3b6c6e9925d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 57418326}
 --- !u!1001 &6132910206853622557
 PrefabInstance:
   m_ObjectHideFlags: 0
