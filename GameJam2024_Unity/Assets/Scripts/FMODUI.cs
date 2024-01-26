@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FMODUI : MonoBehaviour
 {
-    public void SetWinParameter()
+    public void SetWinParameter(float val)
     {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Win", 1);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Win", val);
     }
 
     public void PlayClockWindAnim()
