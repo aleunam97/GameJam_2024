@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class Fritz : MonoBehaviour
 {
     public GameObject tutorialScreen;
+    public GameObject creditsScreen;
 
     bool tutorialIsVisible = false;
+    bool creditsIsVisible = false;
 
     void Update()
     {
@@ -15,11 +17,12 @@ public class Fritz : MonoBehaviour
         {
             if (tutorialIsVisible)
             {
-                ShowTutorial();
-            }
-            else
-            {
                 HideTutorial();
+            }
+
+            if(creditsIsVisible)
+            {
+                HideCredits();
             }
         }
     }
@@ -32,13 +35,27 @@ public class Fritz : MonoBehaviour
     public void ShowTutorial()
     {
         Debug.Log("Tutorial active.");
+        tutorialIsVisible = true;
         tutorialScreen.SetActive(true);
     }
 
     public void HideTutorial()
     {
         Debug.Log("Tutorial false.");
+        tutorialIsVisible = false;
         tutorialScreen.SetActive(false);
+    }
+    public void ShowCredits()
+    {
+        Debug.Log("Credits active.");
+        creditsIsVisible = true;
+        creditsScreen.SetActive(true);
+    }
+    public void HideCredits()
+    {
+        Debug.Log("Credits false.");
+        creditsIsVisible = false;
+        creditsScreen.SetActive(false);
     }
 
     public void Quit()
