@@ -898,6 +898,31 @@ PrefabInstance:
       propertyPath: tutorialScreen
       value: 
       objectReference: {fileID: 1641690913}
+    - target: {fileID: 7477447624721573109, guid: 795b441bcecf148f58601a18d8664554,
+        type: 3}
+      propertyPath: m_text
+      value: Send a'Clock
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477447624721573109, guid: 795b441bcecf148f58601a18d8664554,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477447624721573109, guid: 795b441bcecf148f58601a18d8664554,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.4669811
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477447624721573109, guid: 795b441bcecf148f58601a18d8664554,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.7402467
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477447624721573109, guid: 795b441bcecf148f58601a18d8664554,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294932413
+      objectReference: {fileID: 0}
     - target: {fileID: 8959931775073654954, guid: 795b441bcecf148f58601a18d8664554,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1015,5 +1040,5 @@ SceneRoots:
   - {fileID: 1141042428}
   - {fileID: 254986855}
   - {fileID: 2010814558}
-  - {fileID: 6059972239076941987}
   - {fileID: 1641690917}
+  - {fileID: 6059972239076941987}
